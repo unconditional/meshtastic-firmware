@@ -56,12 +56,13 @@ void menuHandler::LoraRegionPicker(uint32_t duration)
                                          "KZ_433",
                                          "KZ_863",
                                          "NP_865",
-                                         "BR_902"};
+                                         "BR_902",
+                                         "IL_917"};
     BannerOverlayOptions bannerOptions;
     bannerOptions.message = "Set the LoRa region";
     bannerOptions.durationMs = duration;
     bannerOptions.optionsArrayPtr = optionsArray;
-    bannerOptions.optionsCount = 27;
+    bannerOptions.optionsCount = 28;
     bannerOptions.InitialSelected = 0;
     bannerOptions.bannerCallback = [](int selected) -> void {
         if (selected != 0 && config.lora.region != _meshtastic_Config_LoRaConfig_RegionCode(selected)) {
